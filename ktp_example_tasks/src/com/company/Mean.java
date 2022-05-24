@@ -12,4 +12,5 @@ public class Mean {
         double result = totalDistance(70.0, 7.0, 0, false);
         System.out.println(result);
     }
+
 }
