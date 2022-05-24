@@ -1,16 +1,18 @@
 package com.company;
 
 public class Mean {
-    public static double totalDistance(double liters, double litersPerKilo, int passengers, boolean cooler) {
-        litersPerKilo *= 1.00 + 0.05 * passengers;
-        if (cooler) litersPerKilo *= 1.10;
-
-        return liters * 100 / litersPerKilo;
+    public static double mean(int[] numbers) {
+        int summa = 0;
+        int i = 0;
+        for (int number : numbers) {
+            summa += number;
+            i++;
+        }
+        return (double) summa / i;
     }
 
     public static void main(String[] args) {
-        double result = totalDistance(70.0, 7.0, 0, false);
+        double result = mean(new int[]{2, 3, 2, 3});
         System.out.println(result);
     }
-
 }
